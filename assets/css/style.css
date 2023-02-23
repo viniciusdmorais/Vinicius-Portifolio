@@ -1,4 +1,13 @@
 /**************** HEADER ******************************************************************/
+@media (min-width: 600px) {
+  .top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+}
 /* Header/logo Title */
 .top-header {
   position: fixed;
@@ -7,6 +16,7 @@
   background: #282a36;
   z-index: 3;
 }
+
 .header {  
   padding-left: 20px;
   text-align: left;
@@ -73,7 +83,6 @@
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-
   .row,
   .navbar {
     flex-direction: column;
