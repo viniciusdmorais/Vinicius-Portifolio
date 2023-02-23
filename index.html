@@ -1,115 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Vinicius de Morais</title>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/anima_caixa.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css">   
+    <title>Meu Portfólio</title>
 </head>
+
 <body>
-    <header>
+    <header class="top-header">
         <div class="header">
-            <h1>
-                Vinicius de Morais
-            </h1>
+            <h1>&lt; Vinícius de Morais &gt;</h1>
         </div>
-        <div class="navbar">
-            <a href="#" target="_blank">
-                Inicio
-            </a>
-            <a href="#" target="_blank">
-                Quem Sou
-            </a>
-
-            <a href="#" target="_blank">
-                Experiencias
-            </a>
-
-            <a href="#" target="_blank">
-                Conhecimentos
-            </a>
-        </div>
+        <nav class="navbar">
+            <p id="nav-home">Home</p>
+            <p id="nav-sobre">Sobre mim</p>
+            <p id="nav-experiencias">Experiências</p>
+            <p id="nav-conhecimentos">Conhecimentos</p>
+        </nav>
     </header>
-    <main>
-        <div class="row">
-            <div class="side">
-                <img src="assets/img/avatarvini2.png" alt="foto-perfil" id="foto-perfil">
+
+    <main id="sobre">
+        <section class="container-quem-sou" >
+            <h2 class="h2-title">Quem sou</h2>
+            <div class="texto">
+                <p id="quem-sou">
+                    Olá! Me chamo Vinícius e sou um Analista de Sistemas mais acostumado com Backoffice, mas aos poucos
+                    quero me tornar um FullStack. 
+                    Recentemente concluí um curso onde aprendi as principais habilidades de desenvolvimento web, 
+                    como HTML, CSS e JavaScript, além de ter tido uma introdução ao mundo de bancos de dados. 
+                    Estou animado em colocar em prática tudo que aprendi e continuar a desenvolver minhas habilidades 
+                    e conhecimentos na área. Sinta-se à vontade para explorar meu portfólio e conhecer alguns 
+                    dos projetos que já desenvolvi.
+                </p>
+                <a href="https://www.instagram.com/_vinymorais_/">
+                    <img class="instagram-logo" src="assets/img/instagram-1.png" alt="Logo do Instagram">                    
+                </a>
+                <a href="https://www.linkedin.com/in/viniciusdemoraismendes">
+                    <img class="instagram-logo" src="assets/img/linkedin.png" alt="Logo do Linkedin">
+                </a>
             </div>
-            <div class="main">
-                <section class="container-quem-sou">
-                    <h2 class="h2-title">Quem sou</h2>
-                    <span id="quem-sou">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel autem earum distinctio deserunt
-                        delectus sint quae quia cum dolore, esse, asperiores eaque officiis doloribus nisi incidunt
-                        assumenda eos, repudiandae tempora!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel autem earum distinctio deserunt
-                        delectus sint quae quia cum dolore, esse, asperiores eaque officiis doloribus nisi incidunt
-                        assumenda eos, repudiandae tempora!
-                    </span>
-                    <div>
-                        <a href="#" target="_blank">
-                            <img src="assets/img/instagram.png" alt="intagram-img" class="instagram-logo">
-                        </a>
-                        <a href="#" target="_blank">
-                            <img src="assets/img/linkedin.png" alt="linkedin-img" class="instagram-logo">
-                        </a>
-                    </div>
-                </section>
+            <img id="foto-perfil" src="assets/img/vinimorais.png" alt="Foto de perfil">
+        </section>
+
+        <section class="row-2" id="experiencias">
+            <h2 class="h2-title-2" >Experiências</h2>
+            <div class="container-experiencias">
+                <div class="img-experiencias">
+                    <img class="border-img-2" src="assets/img/magazineluiz.png" alt="Imagem 1">
+                    <img class="border-img-2" src="assets/img/Betta Work Solucoes De Tecnologia Ltda.jfif"
+                        alt="Imagem 2">
+                    <img class="border-img-2" src="assets/img/basequimicasa.png" alt="Imagem 3">
+                </div>
             </div>
-            <div>
-                <div class="row-2">
-                    <!--                                 SESSÃO 2                                                        -->
-                    <h2 class="h2-title-2">Experiencias</h2>
-                    <div class="img-experiencias">
-                        <img src="assets/img/magazineluiz.png" alt="img-experiencias" class="border-img-2">
-                        <img src="assets/img/Betta Work Solucoes De Tecnologia Ltda.jfif" alt="img-experiencias"
-                            class="border-img-2">
-                        <img src="assets/img/basequimicasa.png" alt="img-experiencias" class="border-img-2">
-                    </div>
-                    <section class="container-experiencias">
-                        <span id="quem-sou">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel autem earum distinctio
-                            deserunt
-                            delectus sint quae quia cum dolore, esse, asperiores eaque officiis doloribus nisi incidunt
-                            assumenda eos, repudiandae tempora!
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel autem earum distinctio
-                            deserunt
-                            delectus sint quae quia cum dolore, esse, asperiores eaque officiis doloribus nisi incidunt
-                            assumenda eos, repudiandae tempora!
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nisi asperiores molestiae consectetur 
-                            voluptatem nulla, ducimus ad nam nemo pariatur culpa placeat est excepturi? Reiciendis error illum voluptatum 
-                            itaque velit!
-                        </span>
-                    </section>
-                    <!--                                 SESSÃO 3                                                        -->
-                    <div class="row-3">
-                        <div class="side-3">
-                            <img src="assets/img/caixa-conhecimento.png" alt="foto-perfil" id="img-caixa">
-                        </div>
-                        <div class="main-3">
-                            <section class="container-conhecimentos">
-                                <h2 class="h2-title-3">Conhecimentos</h2>
-                                <span id="quem-sou">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel autem earum distinctio
-                                    deserunt
-                                    delectus sint quae quia cum dolore, esse, asperiores eaque officiis doloribus nisi
-                                    incidunt
-                                    assumenda eos, repudiandae tempora!
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel autem earum distinctio
-                                    deserunt
-                                    delectus sint quae quia cum dolore, esse, asperiores eaque officiis doloribus nisi
-                                    incidunt
-                                    assumenda eos, repudiandae tempora!
-                                </span>
-                            </section>
-                        </div>
-                    <div>
+        </section>
+
+        <section class="row-3" id="conhecimentos">
+            <div class="side-3">
+                <img id="img-html" src="assets/img/logo-html-5-256.png" alt="Imagem logo html">
+                <img id="img-css" src="assets/img/logo-css-3-256.png" alt="Imagem logo css">
+                <img id="img-js" src="assets/img/logo-javascript-icon-256.png" alt="Imagem logo JavaScript">
+                <img id="img-caixa" src="assets/img/caixa-conhecimento.png" alt="Imagem de uma caixa">
+            </div>
+            <div class="main-3">
+                <h2 class="h2-title-3" >Conhecimentos</h2>
+                <div class="container-conhecimentos">
+                    <p>
+                        Habilidades em HTML, CSS e JavaScript. 
+                        Tenho conhecimentos básicos suficientes para criar páginas 
+                        web atraentes e responsivas, estilizar elementos com CSS e adicionar funcionalidades com 
+                        JavaScript. Também tenho conhecimentos básicos em banco de dados. 
+                        Estou animado para continuar aprendendo e aprimorando minhas habilidades 
+                        para criar experiências de usuário cada vez melhores.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
         <div class="footer">
-            Vinicius 2022
+            <p>Vinicius 2023</p>
         </div>
     </footer>
 </body>
