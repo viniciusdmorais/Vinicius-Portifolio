@@ -1,4 +1,13 @@
 /**************** HEADER ******************************************************************/
+
+/* Header/logo Title */
+.top-header {
+  top: 0;
+  width: 1333px;
+  background: #282a36;
+  z-index: 3;
+}
+
 @media (min-width: 600px) {
   .top-header {
     position: fixed;
@@ -8,16 +17,8 @@
     z-index: 100;
   }
 }
-/* Header/logo Title */
-.top-header {
-  position: fixed;
-  top: 0;
-  width: 1333px;
-  background: #282a36;
-  z-index: 3;
-}
 
-.header {  
+.header {
   padding-left: 20px;
   text-align: left;
   color: white;
@@ -82,7 +83,8 @@
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
+
   .row,
   .navbar {
     flex-direction: column;
@@ -170,6 +172,7 @@
   padding: 0px 50px 50px;
 }
 
+
 .h2-title-2 {
   color: #c79a41;
   text-align: center;
@@ -181,6 +184,16 @@
   justify-content: center;
   gap: 50px;
   margin-top: 50px;
+}
+
+@media (max-width: 800px) {
+  .img-experiencias {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    flex-direction: column;
+  }
 }
 
 .border-img-2 {
@@ -233,6 +246,7 @@
   position: absolute;
   z-index: 2;
 }
+
 #img-css {
   margin-top: 100px;
   margin-left: 175px;
@@ -241,6 +255,7 @@
   position: absolute;
   z-index: 2;
 }
+
 #img-js {
   margin-top: 100px;
   margin-left: 250px;
@@ -249,65 +264,66 @@
   position: absolute;
   z-index: 2;
 }
-  /* Main column */
-  .main-3 {
-    flex: 50%;
-    background-color: #383A59;
-    padding: 20px;
+
+/* Main column */
+.main-3 {
+  flex: 50%;
+  background-color: #383A59;
+  padding: 20px;
+}
+
+/* Title */
+.h2-title-3 {
+  color: #c79a41;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Conhecimentos container */
+.container-conhecimentos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 50px 10px;
+  color: #c79a41;
+}
+
+/* Conhecimentos item */
+.conhecimento-item {
+  background-color: #F8F8F2;
+  color: #383A59;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  width: 250px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #282A36;
+  color: #F8F8F2;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: auto;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 700px) {
+  .row-3 {
+    flex-direction: column;
   }
 
-  /* Title */
-  .h2-title-3 {
-    color: #c79a41;
-    text-align: center;
-    margin-top: 0;
-  }
-
-  /* Conhecimentos container */
-  .container-conhecimentos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 50px 10px;
-    color: #c79a41;
-  }
-
-  /* Conhecimentos item */
   .conhecimento-item {
-    background-color: #F8F8F2;
-    color: #383A59;
-    font-weight: bold;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
-    width: 250px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: 80%;
+    height: 150px;
   }
+}
 
-  /* Footer */
-  .footer {
-    padding: 20px;
-    text-align: center;
-    background: #282A36;
-    color: #F8F8F2;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: auto;
-  }
-
-  /* Responsiveness */
-  @media screen and (max-width: 700px) {
-    .row-3 {
-      flex-direction: column;
-    }
-
-    .conhecimento-item {
-      width: 80%;
-      height: 150px;
-    }
-  }
-
-  /***********************************************************************************/
+/***********************************************************************************/
