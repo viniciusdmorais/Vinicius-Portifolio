@@ -64,7 +64,7 @@ imgCaixa.addEventListener('mouseover', function () {
     margin-top: 100px;
     margin-left: 100px;
     */ 
-    animateElement(imgHtml, 50, 70, 7000, 80, 90);
+    animateElement(imgHtml, 50, 70, 2000, 80, 90);
     // chama a segunda função existente
     /*animateElement(imgCss, 0, 190, 3000);*/
     /*
@@ -73,7 +73,7 @@ imgCaixa.addEventListener('mouseover', function () {
     margin-top: 100px;
     margin-left: 175px;
     */ 
-    animateElement(imgCss, 0, 175, 7000, 50, 155);
+    animateElement(imgCss, 0, 175, 2000, 50, 155);
     // chama a terceira função existente
     /*animateElement(imgJs, 30, 350, 3000);*/   
     /*
@@ -82,7 +82,7 @@ imgCaixa.addEventListener('mouseover', function () {
     margin-top: 100px;
     margin-left: 250px;
     */ 
-    animateElement(imgJs, 5, 290, 7000, 50, 240 );
+    animateElement(imgJs, 5, 290, 2000, 50, 240 );
 });
 
 
