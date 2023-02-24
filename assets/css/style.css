@@ -330,6 +330,10 @@
 /***********************************************************************************/
 /* Ajustes para um celular POCO X4 PRO 5G Resolução de 1080 x 2400 pixels*/
 @media only screen and (max-width: 600px) {
+  /*Body*/
+  body {
+    background-color: #383a59;
+  }
   /* Header */
   .top-header {
   width: 100%;
