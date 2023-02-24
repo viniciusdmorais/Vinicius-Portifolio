@@ -1,90 +1,56 @@
-const imgCaixa = document.getElementById('img-caixa')
+const imgCaixa = document.getElementById('img-caixa');
+const imgHtml = document.getElementById('img-html');
+const imgCss = document.getElementById('img-css');
+const imgJs = document.getElementById('img-js');
 
-const imgHtml = document.getElementById('img-html')
-const imgCss = document.getElementById('img-css')
-const imgJs = document.getElementById('img-js')
+const getComputedStyle = (element) => window.getComputedStyle(element);
+const getMarginTop = (element) => parseInt(getComputedStyle(element).marginTop);
+const getMarginLeft = (element) => parseInt(getComputedStyle(element).marginLeft);
 
-const imgHtmlEstilo = window.getComputedStyle(imgHtml);
-const imgHtmlmarginTop = imgHtmlEstilo.marginTop;
-const imgHtmlmarginLeft = imgHtmlEstilo.marginLeft;
+const ANIMATION_INTERVAL = 10;
+const ANIMATION_DURATION = 900;
 
-const imgCssEstilo = window.getComputedStyle(imgCss);
-const imgCssmarginTop = imgCssEstilo.marginTop;
-const imgCssmarginLeft = imgCssEstilo.marginLeft;
+const animateElement = (element, finalMarginTop, finalMarginLeft, intermediateMarginTop, intermediateMarginLeft) => {
+  const startMarginTop = getMarginTop(element);
+  const startMarginLeft = getMarginLeft(element);
 
-const imgJsEstilo = window.getComputedStyle(imgJs);
-const imgJsmarginTop = imgJsEstilo.marginTop;
-const imgJsmarginLeft = imgJsEstilo.marginLeft;
+  const marginStepTop1 = (intermediateMarginTop - startMarginTop) / (ANIMATION_DURATION / ANIMATION_INTERVAL);
+  const marginStepLeft1 = (intermediateMarginLeft - startMarginLeft) / (ANIMATION_DURATION / ANIMATION_INTERVAL);
 
+  const marginStepTop2 = (finalMarginTop - intermediateMarginTop) / (ANIMATION_DURATION / ANIMATION_INTERVAL);
+  const marginStepLeft2 = (finalMarginLeft - intermediateMarginLeft) / (ANIMATION_DURATION / ANIMATION_INTERVAL);
 
-function animateElement(element, finalMarginTop, finalMarginLeft, duration, intermediateMarginTop, intermediateMarginLeft) {
-    const startMarginTop = parseInt(window.getComputedStyle(element).marginTop);
-    const startMarginLeft = parseInt(window.getComputedStyle(element).marginLeft);
+  let currentMarginTop = startMarginTop;
+  let currentMarginLeft = startMarginLeft;
 
-    const marginStepTop1 = (intermediateMarginTop - startMarginTop) / (duration / 30);
-    const marginStepLeft1 = (intermediateMarginLeft - startMarginLeft) / (duration / 30);
+  const animationInterval = setInterval(function animate() {
+    if (currentMarginTop < intermediateMarginTop) {
+      currentMarginTop += marginStepTop1;
+      currentMarginLeft += marginStepLeft1;
+    } else {
+      currentMarginTop += marginStepTop2;
+      currentMarginLeft += marginStepLeft2;
+    }
 
-    const marginStepTop2 = (finalMarginTop - intermediateMarginTop) / (duration / 30);
-    const marginStepLeft2 = (finalMarginLeft - intermediateMarginLeft) / (duration / 30);
+    element.style.marginTop = `${currentMarginTop}px`;
+    element.style.marginLeft = `${currentMarginLeft}px`;
 
-    let currentMarginTop = startMarginTop;
-    let currentMarginLeft = startMarginLeft;
+    if (Math.abs(currentMarginTop - finalMarginTop) < Math.abs(marginStepTop1) + Math.abs(marginStepTop2)) {
+      clearInterval(animationInterval);
+      element.style.marginTop = `${finalMarginTop}px`;
+      element.style.marginLeft = `${finalMarginLeft}px`;
+    }
+  }, ANIMATION_INTERVAL);
+};
 
-    const interval = setInterval(() => {
-        if (currentMarginTop < intermediateMarginTop) {
-            currentMarginTop += marginStepTop1;
-            currentMarginLeft += marginStepLeft1;
-        } else {
-            currentMarginTop += marginStepTop2;
-            currentMarginLeft += marginStepLeft2;
-        }
+function animateCaixa() {
+  imgHtml.style.display = 'block';
+  imgCss.style.display = 'block';
+  imgJs.style.display = 'block';
 
-        element.style.marginTop = `${currentMarginTop}px`;
-        element.style.marginLeft = `${currentMarginLeft}px`;
-
-        if (Math.abs(currentMarginTop - finalMarginTop) < Math.abs(marginStepTop1) + Math.abs(marginStepTop2)) {
-            clearInterval(interval);
-            element.style.marginTop = `${finalMarginTop}px`;
-            element.style.marginLeft = `${finalMarginLeft}px`;
-        }
-    }, 10);
+  animateElement(imgHtml, 50, 70, 80, 90);
+  animateElement(imgCss, 0, 175, 50, 155);
+  animateElement(imgJs, 5, 280, 50, 240);
 }
 
-
-
-imgCaixa.addEventListener('mouseover', function () {
-    // chama a primeira função existente
-    imgHtml.style.display = 'block';
-    imgCss.style.display = 'block';
-    imgJs.style.display = 'block';
-    /*
-    animateElement(element, finalMarginTop, finalMarginLeft, duration, intermediateMarginTop, intermediateMarginLeft)
-    Inicial
-    imgHtml
-    margin-top: 100px;
-    margin-left: 100px;
-    */ 
-    animateElement(imgHtml, 50, 70, 2000, 80, 90);
-    // chama a segunda função existente
-    /*animateElement(imgCss, 0, 190, 3000);*/
-    /*
-    Inicial
-    imgCss
-    margin-top: 100px;
-    margin-left: 175px;
-    */ 
-    animateElement(imgCss, 0, 175, 2000, 50, 155);
-    // chama a terceira função existente
-    /*animateElement(imgJs, 30, 350, 3000);*/   
-    /*
-    Inicial
-    imgJs
-    margin-top: 100px;
-    margin-left: 250px;
-    */ 
-    animateElement(imgJs, 5, 290, 2000, 50, 240 );
-});
-
-
-
-
+imgCaixa.addEventListener('mouseover', animateCaixa);
