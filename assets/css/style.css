@@ -328,3 +328,91 @@
 }
 
 /***********************************************************************************/
+/* Ajustes para um celular POCO X4 PRO 5G Resolução de 1080 x 2400 pixels*/
+@media only screen and (max-width: 600px) {
+  /* Header */
+  .top-header {
+  width: 100%;
+  }
+  /* Navigation */
+  .navbar {
+  justify-content: center;
+  margin-top: 10px;
+  }
+  .navbar p {
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 15px;
+  }
+  /* SESSAO 1 */
+  .container-quem-sou {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  padding: 20px;
+  }
+  .imagem-quem-sou {
+  display: none;
+  }
+  #foto-perfil {
+  margin: 0 auto;
+  max-width: 80%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 3px double #c79a41;
+  }
+  .h2-title {
+  margin-top: 20px;
+  font-size: 24px;
+  text-align: center;
+  }
+  #quem-sou {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  text-align: justify;
+  }
+  .quem-sou-content {
+  margin-bottom: 10px;
+  }
+  .instagram-logo {
+  padding: 10px;
+  width: 30px;
+  }
+  /* SESSAO 2 */
+  .row-2 {
+  padding: 50px 20px;
+  }
+  .container-experiencias {
+  padding: 0px 20px;
+  }
+  .h2-title-2 {
+  margin-top: 50px;
+  font-size: 24px;
+  text-align: center;
+  }
+  .img-experiencias {
+  margin-top: 30px;
+  justify-content: center;
+  gap: 30px;
+  }
+  .border-img-2 {
+  width: 150px;
+  height: 130px;
+  }
+  /* SESSAO 3 */
+  .row-3 {
+  flex-direction: column;
+  padding: 50px 20px;
+  }
+  .side-3 {
+  flex: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  }
+  #img-caixa {
+  padding-top: 50px;
+  max-width: 80%;
+  }
+  }
