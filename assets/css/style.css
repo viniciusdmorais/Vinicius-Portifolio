@@ -3,7 +3,7 @@
 /* Header/logo Title */
 .top-header {
   top: 0;
-  width: 1333px;
+  width: 100%;
   background: #282a36;
   z-index: 3;
 }
@@ -159,6 +159,7 @@
 
 .instagram-logo:hover {
   transform: scale(1.4);
+  cursor: pointer;
 }
 
 /********** SESSAO 2 *************/
