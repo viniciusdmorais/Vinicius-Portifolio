@@ -1,0 +1,112 @@
+/* Estilos para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* Reset padrão para o body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
+
+/* Remova o sublinhado padrão e defina uma cor para os links */
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #0078d4; /* Cor dos links */
+    cursor: pointer; /* Mude o estilo do cursor ao passar o mouse sobre os links (opcional) */
+}
+
+/* Estilize os links quando o mouse passar sobre eles (opcional) */
+a:hover {
+    text-decoration: underline; /* Adicione um sublinhado ao passar o mouse sobre os links (opcional) */
+}
+
+
+/* Container principal para centralizar o conteúdo */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    justify-content: center;
+    margin: 10px;
+}
+
+/* Estilos comuns para os cards */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.33% - 20px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+
+/* Estilos para o menu de hambúrguer */
+.menu {
+    display: block;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #f2f2f2;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+footer img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
