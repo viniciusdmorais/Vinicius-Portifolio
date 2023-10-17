@@ -110,3 +110,48 @@ footer img {
     height: 90px;
     border-radius: 50%;
 }
+
+/* Estilos para dispositivos menores (mobile) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-icon i {
+        font-size: 24px;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+/* Estilos para tornar os cards responsivos */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.33% - 20px);
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
