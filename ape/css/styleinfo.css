@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 10;
+    background-color: #5f88e9;
+}
+
+/* Estilo base do card */
+.card {
+    width: 50%; /* Ajuste a largura como desejar */
+    max-width: 400px; /* Largura máxima para evitar esticamento em telas grandes */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: height 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Estilo do card quando expandido */
+.card.expanded {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 50%; /* Posiciona o card no meio vertical */
+    left: 50%; /* Posiciona o card no meio horizontal */
+    transform: translate(-50%, -50%); /* Centraliza o card */
+    margin-top: 20%;
+    
+}
+
+/* Estilo da lista de descrição */
+.description {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.card.expanded .description {
+    display: block;
+}
