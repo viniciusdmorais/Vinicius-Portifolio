@@ -5,7 +5,7 @@ document.getElementById('form-contatos')
 
         event.preventDefault();
 
-        btn.value = 'Sending...';
+        btn.value = 'Enviando...';
 
         const serviceID = 'service_n0cls0k';
         const templateID = 'template_mo8fjgi';
