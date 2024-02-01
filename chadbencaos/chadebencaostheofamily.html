@@ -196,10 +196,17 @@
             transition: 1s;
             cursor: pointer;
         }
+        #audioPlayer {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
+    <audio controls autoplay id="audioPlayer">
+        <source src="assets/music.mp3" type="audio/mp3">
+        Seu navegador não suporta a tag de áudio.
+    </audio>
      <div class="floaters">
         <ul>
             <li>
