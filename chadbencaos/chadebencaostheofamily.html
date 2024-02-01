@@ -130,6 +130,35 @@
             margin-bottom: 5px;
             color: #0d3b7d;
         }
+        .card-pix {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card {
+            max-width: 500px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #94d9f6;
+            box-shadow: 0px 0px 10px rgba(45, 48, 48, 0.3);
+            border-radius: 5px;
+        }
+
+        .card img {
+            height: 120px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -307,7 +336,19 @@
             </div>-->
         </div>
     </main>
-
+     <section class="card-pix">
+        <div class="card-container">
+            <div class="card">
+                <img src="img/pix.jpg" alt="PIX">
+                <p>Se desejar abençoar por pix, segue QR Code</p>
+            </div>
+    
+            <div class="card">
+                <img src="img/listaamazon.jpg" alt="Card Image 2">
+                <p>Venha conhecer a lista de presentes</p>
+            </div>
+        </div>
+    </section>
     <footer>
         <p>Agradecemos a todos por abençoarem a vida do Theo.</p>
         <ul>
@@ -318,12 +359,6 @@ Endereço: Rua Salvador Neves, 425 - Bloco B, Apto 46
 Bairro:   Vila Maria Luiza (Sumarezinho)
 Cidade:   Ribeirão Preto - SP
 CEP:      14055-340
-                </li>
-                <li>
-Se desejar abençoar por pix, segue QR Code abaixo:
-                </li>
-                <li>
-                <img src="img/pix.jpg" alt="Chá de Bençãos do Theo">
                 </li>
             </pre>
         </ul>
