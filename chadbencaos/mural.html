@@ -54,7 +54,7 @@
                 const screenHeight = window.innerHeight;
                 const randomX = Math.random() * (window.innerWidth - 300);
                 //const randomDuration = Math.random() * (2000 - 1000) + 1000;
-                const randomDuration = Math.random() * (isMobile ? 5000 : 2000) + 1000;
+                const randomDuration = Math.random() * (isMobile ? 2000 : 2000) + 1000;
 
 
                 card.style.transform = `translate(${randomX}px, ${screenHeight}px)`;
@@ -84,7 +84,7 @@
                 cardContainer.appendChild(card);
                 animateCard(card, isMobile);
                 //setTimeout(() => loopCards(cardTexts), 2000); // Intervalo entre os cards
-                setTimeout(() => loopCards(cardTexts, isMobile), isMobile ? 5000 : 2000); // Intervalo entre os cards
+                setTimeout(() => loopCards(cardTexts, isMobile), isMobile ? 2000 : 2000); // Intervalo entre os cards
             }
 
             loadCardTexts(function (cardTexts, isMobile) {
