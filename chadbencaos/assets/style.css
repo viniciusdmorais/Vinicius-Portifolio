@@ -54,13 +54,19 @@ footer img {
 }
 
 .product-item {
+    border: 2px solid #ccc; /* Cor da borda */
+    border-radius: 10px; /* Borda arredondada */
+    margin: 10px; /* Espaçamento entre os itens */
+    padding: 10px; /* Espaçamento interno */
     text-align: center;
 }
 
 .product-item img {
     width: 168px;
-    height: 167px;
+    height: 167px; /* Ajusta a largura da imagem para ocupar 100% do contêiner */
+    border-radius: 8px; /* Borda arredondada para a imagem */
 }
+
 
 img {
     max-width: 100%;
@@ -181,7 +187,7 @@ ul {
 
 /* Change color on hover */
 .floaters p:hover {
-    background-color: #ddd;
+    background-color: #ffffff;
     color: black;
     transition: 1s;
     cursor: pointer;
