@@ -114,11 +114,11 @@
                 const screenHeight = window.innerHeight;
                 const randomX = Math.random() * (window.innerWidth - 300);
                 // Gera uma duração de animação aleatória (entre 1000ms e 3000ms para não móveis, e entre 1000ms e 3000ms para móveis)
-                const randomDuration = Math.random() * (isMobile ? 2000 : 2000) + 3000;
+                const randomDuration = Math.random() * (isMobile ? 7000 : 2000) + 3000;
                 /*card.style.opacity = (isMobile ? 1 : 1);*/
                 // Adiciona um console.log para exibir a opacidade antes da animação
                 console.log("Opacidade antes da animação:", card.style.opacity);
-
+                console.log("Duração aleatória", randomDuration);
                 // Configura a posição inicial do card e a opacidade
                 card.style.transform = `translate(${randomX}px, ${screenHeight}px)`;
                 card.style.opacity = (isMobile ? 1 : 1);
@@ -157,7 +157,7 @@
                 cardContainer.appendChild(card);
                 // Inicia a animação do card
                 animateCard(card, isMobile);
-                // Define um temporizador para chamar a função novamente após um intervalo (2 segundos para não móveis, 2 segundos para móveis)
+                // Define um temporizador para chamar a função novamente após um intervalo (3 segundos para não móveis, 7 segundos para móveis)
                 setTimeout(() => loopCards(cardTexts, isMobile), isMobile ? 7000 : 3000);
             }
 
