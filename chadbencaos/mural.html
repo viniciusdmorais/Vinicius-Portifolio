@@ -43,35 +43,8 @@
             align-items: center;
         }
 
-
         #audioPlayer {
             display: none;
-        }
-
-        /* Estilos específicos para telas menores, como smartphones */
-        @media only screen and (max-width: 600px) {
-
-            .card {
-            position: absolute;
-            width: 300px;
-            height: 150px;
-            background-color: #b95237;
-            border: 1px solid #f7f3be;
-            border-radius: 50%;
-            padding: 15px;
-            box-sizing: border-box;
-            opacity: 0;
-            transition: transform 30s ease-out, opacity 10s ease-out;
-            text-align: center;
-            color: #fffff5;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.12);
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         }
     </style>
 </head>
@@ -83,9 +56,12 @@
     </audio>
 
     <script>
+        // Aguarda até que o DOM esteja completamente carregado
         document.addEventListener("DOMContentLoaded", function () {
+            // Obtém uma referência ao elemento body, que será o contêiner dos cards
             const cardContainer = document.body;
 
+            // Função que cria um novo elemento de card com o texto fornecido
             function createCard(text) {
                 const card = document.createElement("div");
                 card.className = "card";
@@ -93,46 +69,58 @@
                 return card;
             }
 
+            // Função responsável pela animação de entrada e saída dos cards
             function animateCard(card, isMobile) {
                 const screenHeight = window.innerHeight;
                 const randomX = Math.random() * (window.innerWidth - 300);
-                //const randomDuration = Math.random() * (2000 - 1000) + 1000;
+                // Gera uma duração de animação aleatória (entre 1000ms e 3000ms para não móveis, e entre 1000ms e 3000ms para móveis)
                 const randomDuration = Math.random() * (isMobile ? 2000 : 2000) + 1000;
-                const fixedOpacity = isMobile ? 1 : Math.random(); // Opacidade constante para dispositivos móveis
 
-
+                // Configura a posição inicial do card e a opacidade
                 card.style.transform = `translate(${randomX}px, ${screenHeight}px)`;
-                //card.style.opacity = 1;
-                card.style.opacity = fixedOpacity; // Aplica a opacidade
+                card.style.opacity = 1;
 
+                // Define um temporizador para a animação de saída após a duração aleatória
                 setTimeout(() => {
-                    card.style.transform = `translate(${randomX}px, isMobile ? 2000px : -150px)`;
-                    card.style.opacity = fixedOpacity;
+                    card.style.transform = `translate(${randomX}px, -150px)`;
+                    card.style.opacity = 0;
                 }, randomDuration);
             }
 
+            // Função para carregar o texto dos cards a partir de um arquivo JSON
             function loadCardTexts(callback) {
                 const xhr = new XMLHttpRequest();
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState === 4 && xhr.status === 200) {
+                        // Parseia o JSON retornado e chama a função de retorno com o array de textos
                         const cardTexts = JSON.parse(xhr.responseText);
                         callback(cardTexts);
                     }
                 };
+                // Faz uma requisição assíncrona para o arquivo cardTexts.json
                 xhr.open("GET", "cardTexts.json", true);
                 xhr.send();
             }
 
+            // Função principal que cria e anima os cards em um loop
             function loopCards(cardTexts, isMobile) {
+                // Seleciona um texto aleatório do array
                 const text = cardTexts[Math.floor(Math.random() * cardTexts.length)];
+                // Cria um novo card com o texto escolhido
                 const card = createCard(text);
+                // Adiciona o card ao contêiner
                 cardContainer.appendChild(card);
+                // Inicia a animação do card
                 animateCard(card, isMobile);
-                //setTimeout(() => loopCards(cardTexts), 2000); // Intervalo entre os cards
-                setTimeout(() => loopCards(cardTexts, isMobile), isMobile ? 2000 : 2000); // Intervalo entre os cards
+                // Define um temporizador para chamar a função novamente após um intervalo (2 segundos para não móveis, 2 segundos para móveis)
+                setTimeout(() => loopCards(cardTexts, isMobile), isMobile ? 2000 : 2000);
             }
 
-            loadCardTexts(function (cardTexts, isMobile) {
+            // Inicia o processo carregando os textos dos cards e chamando a função principal
+            loadCardTexts(function (cardTexts) {
+                // Verifica se o dispositivo é móvel baseando-se na largura e altura da tela
+                const isMobile = window.innerWidth <= 430 && window.innerHeight <= 932;
+                // Chama a função principal para começar o loop de cards
                 loopCards(cardTexts, isMobile);
             });
         });
