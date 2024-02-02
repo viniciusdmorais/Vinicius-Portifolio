@@ -189,3 +189,12 @@ ul {
 #audioPlayer {
     display: none;
 }
+
+/* Estilos específicos para telas menores, como smartphones */
+@media only screen and (max-width: 600px) {
+    
+    .floaters {
+        display: none;
+    }
+
+}
