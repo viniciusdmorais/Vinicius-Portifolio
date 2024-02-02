@@ -4,16 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Looping Cards</title>
+    <title>Mural de Bençãos Theo</title>
     <style>
-        /*body {
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            background-color: #debc7c;
-            position: relative;
-        }*/
-
         body {
             overflow: hidden;
             margin: 0;
@@ -29,7 +21,6 @@
             /* Evita a repetição da imagem */
             position: relative;
         }
-
 
         .card {
             position: absolute;
@@ -80,14 +71,16 @@
                 const randomX = Math.random() * (window.innerWidth - 300);
                 //const randomDuration = Math.random() * (2000 - 1000) + 1000;
                 const randomDuration = Math.random() * (isMobile ? 2000 : 2000) + 1000;
+                const fixedOpacity = isMobile ? 1 : Math.random(); // Opacidade constante para dispositivos móveis
 
 
                 card.style.transform = `translate(${randomX}px, ${screenHeight}px)`;
-                card.style.opacity = 1;
+                //card.style.opacity = 1;
+                card.style.opacity = fixedOpacity; // Aplica a opacidade
 
                 setTimeout(() => {
                     card.style.transform = `translate(${randomX}px, -150px)`;
-                    card.style.opacity = 0;
+                    card.style.opacity = fixedOpacity;
                 }, randomDuration);
             }
 
