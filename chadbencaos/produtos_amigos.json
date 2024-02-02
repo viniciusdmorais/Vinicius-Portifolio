@@ -1,0 +1,139 @@
+[
+    {
+        "imgSrc": "img/1.png",
+        "alt": "Produto 1",
+        "title": "Paninho de Boca"
+    },
+    {
+        "imgSrc": "img/2.png",
+        "alt": "Produto 2",
+        "title": "Aspirador nasal"
+    },
+    {
+        "imgSrc": "img/3.png",
+        "alt": "Produto 3",
+        "title": "Body sem manga",
+        "description": "P, M, G e GG"
+    },
+    {
+        "imgSrc": "img/4.png",
+        "alt": "Produto 4",
+        "title": "Body Manga cumprida",
+        "description": "P, M, G e GG"
+    },
+    {
+        "imgSrc": "img/5.png",
+        "alt": "Produto 5",
+        "title": "Body Manga curta",
+        "description": "P, M, G e GG"
+    },
+    {
+        "imgSrc": "img/6.png",
+        "alt": "Produto 6",
+        "title": "Calça/ Mijão",
+        "description": "P, M, G e GG"
+    },
+    {
+        "imgSrc": "img/7.png",
+        "alt": "Produto 7",
+        "title": "Macaquinho Manga curta",
+        "description": "P, M, G e GG"
+    },
+    {
+        "imgSrc": "img/8.png",
+        "alt": "Produto 8",
+        "title": "Macacão manga comprida",
+        "description": "RN, P, M, G e GG"
+    },
+    {
+        "imgSrc": "img/9.png",
+        "alt": "Produto 9",
+        "title": "Macacão sem Manga",
+        "description": "P, M, G e GG"
+    },
+    {
+        "imgSrc": "img/10.png",
+        "alt": "Produto 10",
+        "title": "Shorts",
+        "description": "P, M, G e GG"
+    },
+    {
+        "imgSrc": "img/11.png",
+        "alt": "Produto 11",
+        "title": "Meias",
+        "description": "0-6 meses, 06-12"
+    },
+    {
+        "imgSrc": "img/13.png",
+        "alt": "Produto 13",
+        "title": "Sabonete Liquido Cabeça ao pés"
+    },
+    {
+        "imgSrc": "img/14.png",
+        "alt": "Produto 14",
+        "title": "Sabonete em Espuma Relaxante"
+    },
+    {
+        "imgSrc": "img/15.png",
+        "alt": "Produto 15",
+        "title": "Cotonete"
+    },
+    {
+        "imgSrc": "img/16.png",
+        "alt": "Produto 16",
+        "title": "Fralda descartavel",
+        "description": "P, M, G e GG"
+    },
+    {
+        "imgSrc": "img/17.png",
+        "alt": "Produto 17",
+        "title": "Lenço umedecido",
+        "description": "Recém-Nascido"
+    },
+    {
+        "imgSrc": "img/18.png",
+        "alt": "Produto 18",
+        "title": "Pomada de assadura",
+        "description": "Nistatina"
+    },
+    {
+        "imgSrc": "img/19.png",
+        "alt": "Produto 19",
+        "title": "Prendedor de Chupeta"
+    },
+    {
+        "imgSrc": "img/20.png",
+        "alt": "Produto 20",
+        "title": "Chupeta",
+        "description": "NUK 0-6 meses"
+    },
+    {
+        "imgSrc": "img/21.png",
+        "alt": "Produto 21",
+        "title": "Coero/ Fraldão",
+        "description": "120x120 cm"
+    },
+    {
+        "imgSrc": "img/22.png",
+        "alt": "Produto 22",
+        "title": "Banheira",
+        "description": "Retratil"
+    },
+    {
+        "imgSrc": "img/23.png",
+        "alt": "Produto 23",
+        "title": "Almofada de Amamentação"
+    },
+    {
+        "imgSrc": "img/24.png",
+        "alt": "Produto 24",
+        "title": "KIT Mamadeira",
+        "description": "150ml e 240ml"
+    },
+    {
+        "imgSrc": "img/25.png",
+        "alt": "Produto 25",
+        "title": "Bomba de tira leite",
+        "description": "Portátil"
+    }
+]
