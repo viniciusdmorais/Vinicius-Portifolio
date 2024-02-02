@@ -48,28 +48,42 @@
         }
 
         /* Estilos específicos para telas menores, como smartphones */
-        @media only screen and (max-width: 430) {
+        @media only screen and (max-width: 430px) {
+            body {
+                overflow: hidden;
+                margin: 0;
+                padding: 40px;
+                /* Adicione uma unidade, como px */
+                background-color: #debc7c;
+                background-image: url('img/mural-bg.png');
+                /* Substitua com o caminho para a sua imagem */
+                background-size: cover;
+                /* Ajusta o tamanho da imagem para cobrir todo o elemento */
+                background-position: center top;
+                /* Centraliza a imagem verticalmente */
+                background-repeat: repeat;
+                /* Evita a repetição da imagem */
+            }
 
             .card {
-            position: absolute;
-            width: 300px;
-            height: 150px;
-            background-color: #b95237;
-            border: 1px solid #f7f3be;
-            border-radius: 50%;
-            padding: 15px;
-            box-sizing: border-box;
-            /*transition: transform 15s ease-out, opacity 15s ease-out;*/
-            text-align: center;
-            color: #fffff5;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.12);
+                position: absolute;
+                width: 300px;
+                height: 150px;
+                background-color: #b95237;
+                border: 1px solid #f7f3be;
+                border-radius: 50%;
+                padding: 15px;
+                box-sizing: border-box;
+                /*transition: transform 15s ease-out, opacity 15s ease-out;*/
+                text-align: center;
+                color: #fffff5;
+                font-weight: bold;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.12);
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
     </style>
 </head>
