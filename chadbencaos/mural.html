@@ -43,8 +43,35 @@
             align-items: center;
         }
 
+
         #audioPlayer {
             display: none;
+        }
+
+        /* Estilos específicos para telas menores, como smartphones */
+        @media only screen and (max-width: 600px) {
+
+            .card {
+            position: absolute;
+            width: 300px;
+            height: 150px;
+            background-color: #b95237;
+            border: 1px solid #f7f3be;
+            border-radius: 50%;
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: transform 30s ease-out, opacity 10s ease-out;
+            text-align: center;
+            color: #fffff5;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.12);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         }
     </style>
 </head>
@@ -79,7 +106,7 @@
                 card.style.opacity = fixedOpacity; // Aplica a opacidade
 
                 setTimeout(() => {
-                    card.style.transform = `translate(${randomX}px, -150px)`;
+                    card.style.transform = `translate(${randomX}px, isMobile ? 2000px : -150px)`;
                     card.style.opacity = fixedOpacity;
                 }, randomDuration);
             }
