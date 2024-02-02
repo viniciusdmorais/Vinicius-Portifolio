@@ -50,11 +50,10 @@
                 return card;
             }
 
-            function animateCard(card, isMobile) {
+            function animateCard(card) {
                 const screenHeight = window.innerHeight;
                 const randomX = Math.random() * (window.innerWidth - 300);
-                const randomDuration = Math.random() * (isMobile ? 8000 : 3000) + 1000;
-                const randomOpacityDuration = Math.random() * (isMobile ? 8000 : 3000) + 1000;
+                const randomDuration = Math.random() * (2000 - 1000) + 1000;
 
                 card.style.transform = `translate(${randomX}px, ${screenHeight}px)`;
                 card.style.opacity = 1;
@@ -63,10 +62,6 @@
                     card.style.transform = `translate(${randomX}px, -150px)`;
                     card.style.opacity = 0;
                 }, randomDuration);
-
-                setTimeout(() => {
-                    animateCard(card, isMobile);
-                }, randomDuration + randomOpacityDuration);
             }
 
             function loadCardTexts(callback) {
@@ -81,17 +76,16 @@
                 xhr.send();
             }
 
-            function loopCards(cardTexts, isMobile) {
+            function loopCards(cardTexts) {
                 const text = cardTexts[Math.floor(Math.random() * cardTexts.length)];
                 const card = createCard(text);
                 cardContainer.appendChild(card);
-                animateCard(card, isMobile);
-                setTimeout(() => loopCards(cardTexts, isMobile), isMobile ? 10000 : 5000); // Intervalo entre os cards
+                animateCard(card);
+                setTimeout(() => loopCards(cardTexts), 2000); // Intervalo entre os cards
             }
 
             loadCardTexts(function (cardTexts) {
-                const isMobile = window.innerWidth <= 430 && window.innerHeight <= 932;
-                loopCards(cardTexts, isMobile);
+                loopCards(cardTexts);
             });
         });
     </script>
