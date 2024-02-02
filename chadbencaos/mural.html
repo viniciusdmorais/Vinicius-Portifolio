@@ -53,7 +53,6 @@
                 overflow: hidden;
                 margin: 0;
                 padding: 40px;
-                opacity: 1;
                 /* Adicione uma unidade, como px */
                 background-color: #debc7c;
                 background-image: url('img/mural-bg.png');
@@ -74,6 +73,7 @@
                 border: 1px solid #f7f3be;
                 border-radius: 50%;
                 padding: 15px;
+                opacity: 1;
                 box-sizing: border-box;
                 /*transition: transform 15s ease-out, opacity 15s ease-out;*/
                 text-align: center;
@@ -115,6 +115,9 @@
                 const randomX = Math.random() * (window.innerWidth - 300);
                 // Gera uma duração de animação aleatória (entre 1000ms e 3000ms para não móveis, e entre 1000ms e 3000ms para móveis)
                 const randomDuration = Math.random() * (isMobile ? 2000 : 2000) + 1000;
+                /*card.style.opacity = (isMobile ? 1 : 1);*/
+                // Adiciona um console.log para exibir a opacidade antes da animação
+                console.log("Opacidade antes da animação:", card.style.opacity);
 
                 // Configura a posição inicial do card e a opacidade
                 card.style.transform = `translate(${randomX}px, ${screenHeight}px)`;
@@ -124,6 +127,8 @@
                 setTimeout(() => {
                     card.style.transform = (isMobile ? `translate(${randomX}px, 1000px)` : `translate(${randomX}px, -150px)`);
                     card.style.opacity = (isMobile ? 1 : 0);
+                    // Adiciona um console.log para exibir a opacidade após a animação
+                    console.log("Opacidade após a animação:", card.style.opacity);
                 }, randomDuration);
             }
 
@@ -161,6 +166,8 @@
                 // Verifica se o dispositivo é móvel baseando-se na largura e altura da tela
                 const isMobile = window.innerWidth <= 430 && window.innerHeight <= 932;
                 // Chama a função principal para começar o loop de cards
+                // Adiciona um console.log para exibir o max-width
+                console.log("Max-width da tela:", window.innerWidth);
                 console.log("Initial isMobile value:", isMobile);
                 loopCards(cardTexts, isMobile);
             });
