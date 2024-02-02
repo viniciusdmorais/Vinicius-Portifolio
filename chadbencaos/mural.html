@@ -51,10 +51,18 @@
             justify-content: center;
             align-items: center;
         }
+
+        #audioPlayer {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
+    <audio controls autoplay id="audioPlayer">
+        <source src="assets/music.mp3" type="audio/mp3">
+        Seu navegador não suporta a tag de áudio.
+    </audio>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
