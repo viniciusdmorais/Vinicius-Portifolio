@@ -186,6 +186,11 @@ ul {
     transition: 1s;
     cursor: pointer;
 }
+
+#link-mural {
+    display: none;
+}
+
 #audioPlayer {
     display: none;
 }
