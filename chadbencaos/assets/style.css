@@ -59,6 +59,7 @@ footer img {
     margin: 10px; /* Espaçamento entre os itens */
     padding: 10px; /* Espaçamento interno */
     text-align: center;
+    box-shadow: 0px 0px 10px rgba(45, 48, 48, 0.3);
 }
 
 .product-item img {
