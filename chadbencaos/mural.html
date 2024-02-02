@@ -158,7 +158,7 @@
                 // Inicia a animação do card
                 animateCard(card, isMobile);
                 // Define um temporizador para chamar a função novamente após um intervalo (2 segundos para não móveis, 2 segundos para móveis)
-                setTimeout(() => loopCards(cardTexts, isMobile), isMobile ? 7000 : 7000);
+                setTimeout(() => loopCards(cardTexts, isMobile), isMobile ? 7000 : 3000);
             }
 
             // Inicia o processo carregando os textos dos cards e chamando a função principal
