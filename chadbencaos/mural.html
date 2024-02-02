@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping Cards</title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card {
+            position: absolute;
+            width: 300px;
+            height: 150px;
+            background-color: #94d9f6;
+            border: 1px solid #94d9f6;
+            border-radius: 50%;
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: transform 15s ease-out, opacity 15s ease-out;
+            text-align: center;
+            color: #0d3b7d;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.12);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cardContainer = document.body;
+
+            function createCard(text) {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `<p>${text}</p>`;
+                return card;
+            }
+
+            function animateCard(card) {
+                const screenHeight = window.innerHeight;
+                const randomX = Math.random() * (window.innerWidth - 300);
+                const randomDuration = Math.random() * (2000 - 1000) + 1000;
+
+                card.style.transform = `translate(${randomX}px, ${screenHeight}px)`;
+                card.style.opacity = 1;
+
+                setTimeout(() => {
+                    card.style.transform = `translate(${randomX}px, -150px)`;
+                    card.style.opacity = 0;
+                }, randomDuration);
+            }
+
+            function loadCardTexts(callback) {
+                const xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        const cardTexts = JSON.parse(xhr.responseText);
+                        callback(cardTexts);
+                    }
+                };
+                xhr.open("GET", "cardTexts.json", true);
+                xhr.send();
+            }
+
+            function loopCards(cardTexts) {
+                const text = cardTexts[Math.floor(Math.random() * cardTexts.length)];
+                const card = createCard(text);
+                cardContainer.appendChild(card);
+                animateCard(card);
+                setTimeout(() => loopCards(cardTexts), 2000); // Intervalo entre os cards
+            }
+
+            loadCardTexts(function (cardTexts) {
+                loopCards(cardTexts);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
