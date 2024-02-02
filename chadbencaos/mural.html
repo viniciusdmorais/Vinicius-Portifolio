@@ -6,13 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Looping Cards</title>
     <style>
-        body {
+        /*body {
             overflow: hidden;
             margin: 0;
             padding: 0;
             background-color: #debc7c;
             position: relative;
+        }*/
+
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 40;
+            background-color: #debc7c;
+            background-image: url('img/mural-bg.png');
+            /* Substitua com o caminho para a sua imagem */
+            background-size: auto;
+            /* Ajusta o tamanho da imagem para cobrir todo o elemento */
+            background-position: top;
+            /* Centraliza a imagem no elemento */
+            background-repeat: repeat;
+            /* Evita a repetição da imagem */
+            position: relative;
         }
+
 
         .card {
             position: absolute;
@@ -39,7 +56,7 @@
 
 <body>
 
-     <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cardContainer = document.body;
 
@@ -92,6 +109,7 @@
             });
         });
     </script>
+
 
 </body>
 
