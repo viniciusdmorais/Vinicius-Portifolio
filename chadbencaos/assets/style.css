@@ -188,7 +188,7 @@ ul {
 }
 
 #link-mural {
-    display: none;
+    display: block;
 }
 
 #audioPlayer {
