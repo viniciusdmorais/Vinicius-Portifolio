@@ -46,6 +46,31 @@
         #audioPlayer {
             display: none;
         }
+
+        /* Estilos específicos para telas menores, como smartphones */
+        @media only screen and (max-width: 430) {
+
+            .card {
+            position: absolute;
+            width: 300px;
+            height: 150px;
+            background-color: #b95237;
+            border: 1px solid #f7f3be;
+            border-radius: 50%;
+            padding: 15px;
+            box-sizing: border-box;
+            /*transition: transform 15s ease-out, opacity 15s ease-out;*/
+            text-align: center;
+            color: #fffff5;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.12);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        }
     </style>
 </head>
 
@@ -78,12 +103,12 @@
 
                 // Configura a posição inicial do card e a opacidade
                 card.style.transform = `translate(${randomX}px, ${screenHeight}px)`;
-                card.style.opacity = 1;
+                card.style.opacity = (isMobile ? 1 : 1);
 
                 // Define um temporizador para a animação de saída após a duração aleatória
                 setTimeout(() => {
-                    card.style.transform = `translate(${randomX}px, -150px)`;
-                    card.style.opacity = 0;
+                    card.style.transform = (isMobile ? `translate(${randomX}px, 1000px)` : `translate(${randomX}px, -150px)`);
+                    card.style.opacity = (isMobile ? 1 : 0);
                 }, randomDuration);
             }
 
@@ -121,6 +146,7 @@
                 // Verifica se o dispositivo é móvel baseando-se na largura e altura da tela
                 const isMobile = window.innerWidth <= 430 && window.innerHeight <= 932;
                 // Chama a função principal para começar o loop de cards
+                console.log("Initial isMobile value:", isMobile);
                 loopCards(cardTexts, isMobile);
             });
         });
