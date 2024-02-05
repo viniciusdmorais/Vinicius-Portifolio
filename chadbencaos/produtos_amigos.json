@@ -106,34 +106,5 @@
         "alt": "Produto 20",
         "title": "Chupeta",
         "description": "NUK 0-6 meses"
-    },
-    {
-        "imgSrc": "img/21.png",
-        "alt": "Produto 21",
-        "title": "Coero/ Fraldão",
-        "description": "120x120 cm"
-    },
-    {
-        "imgSrc": "img/22.png",
-        "alt": "Produto 22",
-        "title": "Banheira",
-        "description": "Retratil"
-    },
-    {
-        "imgSrc": "img/23.png",
-        "alt": "Produto 23",
-        "title": "Almofada de Amamentação"
-    },
-    {
-        "imgSrc": "img/24.png",
-        "alt": "Produto 24",
-        "title": "KIT Mamadeira",
-        "description": "150ml e 240ml"
-    },
-    {
-        "imgSrc": "img/25.png",
-        "alt": "Produto 25",
-        "title": "Bomba de tira leite",
-        "description": "Portátil"
     }
 ]
